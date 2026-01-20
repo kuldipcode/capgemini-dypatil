@@ -11,7 +11,7 @@ public class D2Arrays {
         System.out.println("=== 1D Arrays Demo ===");
         
         // Declaration and initialization
-        int[] arr = new int[5];  // Array of size 5 with default values (0)
+        // int[] arr = new int[5];  // Array of size 5 with default values (0)
         int[] arr2 = {10, 20, 30, 40, 50};  // Array literal
         
         // Accessing elements
