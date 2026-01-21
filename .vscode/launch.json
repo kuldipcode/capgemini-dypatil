@@ -6,22 +6,50 @@
     "configurations": [
     {
         "type": "java",
-        "name": "Launch Current File",
+        "name": "Launch Java Program",
         "request": "launch",
-        "mainClass": "${file}"
-    },
-    {
-        "type": "java",
-        "name": "Attach",
-        "request": "attach",
-        "hostName": "localhost",
-        "port": "<debug port of the debuggee>"
+        "mainClass": ""
     },
         {
             "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Arraymanipilation",
+            "request": "launch",
+            "mainClass": "com.day9.Arraymanipilation",
+            "projectName": "DyPatil"
+        },
+        {
+            "type": "java",
+            "name": "D2Arrays",
+            "request": "launch",
+            "mainClass": "com.day9.D2Arrays",
+            "projectName": "DyPatil"
+        },
+        {
+            "type": "java",
+            "name": "LargeSmallEleInArr",
+            "request": "launch",
+            "mainClass": "com.day9.LargeSmallEleInArr",
+            "projectName": "DyPatil"
+        },
+        {
+            "type": "java",
+            "name": "ObjectsArray",
+            "request": "launch",
+            "mainClass": "com.day9.ObjectsArray",
+            "projectName": "DyPatil"
+        },
+        {
+            "type": "java",
+            "name": "RemoveDuplicateEle",
+            "request": "launch",
+            "mainClass": "com.day9.RemoveDuplicateEle",
+            "projectName": "DyPatil"
         },
         {
             "type": "java",
