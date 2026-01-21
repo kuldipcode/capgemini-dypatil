@@ -1,16 +1,16 @@
 package com.day11;
 
-class Node {
-    int data;
-    Node prev;
-    Node next;
-
-    Node(int value) {
-        data = value;
-        prev = null;
-        next = null;
-    }
-}
+//class Node {
+//    int data;
+//    Node prev;
+//    Node next;
+//
+//    Node(int value) {
+//        data = value;
+//        prev = null;
+//        next = null;
+//    }
+//}
 
 public class DoublyLinkedlist {
 
