@@ -1,15 +1,15 @@
 package com.day11;
 
-	class Node {
-	    int data;
-	    Node next;
-
-	    // constructor to initialize a new node with data
-	    Node(int new_data) {
-	        this.data = new_data;
-	        this.next = null;
-	    }
-	}
+//	class Node {
+//	    int data;
+//	    Node next;
+//
+//	    // constructor to initialize a new node with data
+//	    Node(int new_data) {
+//	        this.data = new_data;
+//	        this.next = null;
+//	    }
+//	}
 
 	public class SinglyLinkedlist {
 	    public static void main(String[] args) {
