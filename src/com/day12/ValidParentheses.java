@@ -12,7 +12,7 @@ public class ValidParentheses {
                 stack.push(c);
             } 
             // Handle closing brackets
-            else {
+            else {  
                 // If stack is empty, there is no matching opening bracket
                 if (stack.isEmpty()) return false;
 
