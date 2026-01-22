@@ -1,0 +1,41 @@
+package com.day12;
+
+import java.util.Stack;
+
+public class ValidParentheses {
+    public static boolean isValid(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char c : s.toCharArray()) {
+            // Push opening brackets onto the stack
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            } 
+            // Handle closing brackets
+            else {
+                // If stack is empty, there is no matching opening bracket
+                if (stack.isEmpty()) return false;
+
+                char top = stack.pop();
+                if ((c == ')' && top != '(') ||
+                    (c == '}' && top != '{') ||
+                    (c == ']' && top != '[')) {
+                    return false;
+                }
+            }
+        }
+
+        // If the stack is empty, all brackets were matched correctly
+        return stack.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        String test1 = "()[]{}"; // true
+        String test2 = "([)]";   // false
+        String test3 = "{[]}";   // true
+
+        System.out.println("Test 1: " + isValid(test1));
+        System.out.println("Test 2: " + isValid(test2));
+        System.out.println("Test 3: " + isValid(test3));
+    }
+}
