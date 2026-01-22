@@ -8,11 +8,45 @@ package com.day12;
  * Push the result back onto the stack.After the loop, the final result is the only element remaining in the stack.
  * 
  * */
+import java.util.Stack;
+
 public class ReversePolish {
+    public static int evalRPN(String[] tokens) {
+        Stack<Integer> stack = new Stack<>();
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+        for (String token : tokens) {
+            if (isOperator(token)) {
+                // Pop the two operands
+                int b = stack.pop();
+                int a = stack.pop();
+                
+                // Calculate and push result back
+                stack.push(applyOperator(a, b, token));
+            } else {
+                // Token is a number, push to stack
+                stack.push(Integer.parseInt(token));
+            }
+        }
+        return stack.pop();
+    }
 
-	}
+    private static boolean isOperator(String s) {
+        return s.equals("+") || s.equals("-") || s.equals("*") || s.equals("/");
+    }
 
+    private static int applyOperator(int a, int b, String op) {
+        switch (op) {
+            case "+": return a + b;
+            case "-": return a - b;
+            case "*": return a * b;
+            case "/": return a / b; // Integer division
+            default: throw new IllegalArgumentException("Invalid operator");
+        }
+    }
+
+    public static void main(String[] args) {
+        String[] expression = {"4", "13", "5", "/", "+"}; 
+        // Logic: 4 + (13 / 5) = 4 + 2 = 6
+        System.out.println("Result: " + evalRPN(expression));
+    }
 }
